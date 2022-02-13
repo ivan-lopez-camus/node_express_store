@@ -3,6 +3,7 @@ const routerApi = require('./routes');
 const app = express();
 const port=3000;
 
+app.use(express.json()); //permite recibir info json cuando se envia en postman
 
 app.get('/', (req,res)=>{
     res.send('Hola mi server en express');
@@ -18,4 +19,3 @@ app.listen(port, ()=>{
   console.log('El puerto se ha iniciado en el puerto '+port);
 });
 
-console.log('Mi app')
